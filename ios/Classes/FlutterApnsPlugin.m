@@ -247,7 +247,7 @@ didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSe
   // Check to key to ensure we only handle messages from aps
   if (userInfo[@"aps"]) {
     [_channel invokeMethod:@"onMessage" arguments:userInfo];
-    completionHandler(UNNotificationPresentationOptionNone);
+    completionHandler(UNAuthorizationOptionSound | UNAuthorizationOptionAlert);
   }
 }
 
