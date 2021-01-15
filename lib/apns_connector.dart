@@ -45,6 +45,9 @@ class ApnsPushConnector extends PushConnector {
       case 'onToken':
         token.value = call.arguments;
         return null;
+      case 'onRawToken':
+        rawToken.value = call.arguments;
+        return null;
       case 'onIosSettingsRegistered':
         final obj = IosNotificationSettings._fromMap(
             call.arguments.cast<String, bool>());
@@ -67,6 +70,9 @@ class ApnsPushConnector extends PushConnector {
 
   @override
   final token = ValueNotifier<String>(null);
+
+  @override
+  final rawToken = ValueNotifier<dynamic>(null);
 
   @override
   String get providerType => "APNS";

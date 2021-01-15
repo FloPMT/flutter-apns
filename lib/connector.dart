@@ -5,6 +5,7 @@ typedef Future<dynamic> MessageHandler(Map<String, dynamic> message);
 abstract class PushConnector {
   ValueNotifier<bool> get isDisabledByUser;
   ValueNotifier<String> get token;
+  ValueNotifier<dynamic> get rawToken;
   String get providerType;
 
   /// Run this at app start to connect methods correctly.
