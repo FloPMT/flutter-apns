@@ -45,9 +45,6 @@ class ApnsPushConnector extends PushConnector {
       case 'onToken':
         token.value = call.arguments;
         return null;
-      case 'onRawToken':
-        rawToken.value = call.arguments;
-        return null;
       case 'onIosSettingsRegistered':
         final obj = IosNotificationSettings._fromMap(
             call.arguments.cast<String, bool>());

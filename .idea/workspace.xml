@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c799d468-09af-4768-bd74-c895efc0aaaf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ios/Classes/FlutterApnsPlugin.m" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Classes/FlutterApnsPlugin.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/flutter_apns.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/ios/flutter_apns.podspec" afterDir="false" />
-    </list>
+    <list default="true" id="c799d468-09af-4768-bd74-c895efc0aaaf" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
