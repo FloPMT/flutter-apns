@@ -72,9 +72,6 @@ class ApnsPushConnector extends PushConnector {
   final token = ValueNotifier<String>(null);
 
   @override
-  final rawToken = ValueNotifier<dynamic>(null);
-
-  @override
   String get providerType => "APNS";
 
   @override

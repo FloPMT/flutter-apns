@@ -1,6 +1,7 @@
 #import "FlutterApnsPlugin.h"
 #import <objc/runtime.h>
 #import <UserNotifications/UserNotifications.h>
+#import <Intercom/Intercom.h>
 
 static FlutterError *getFlutterError(NSError *error) {
   if (error == nil) return nil;
@@ -220,9 +221,14 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandl
 
 - (void)application:(UIApplication *)application
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [_channel invokeMethod:@"onRawToken" arguments:deviceToken];
     NSString * token = [self stringWithDeviceToken:deviceToken];
     [_channel invokeMethod:@"onToken" arguments:token];
+
+    @try {
+    [Intercom setDeviceToken:deviceToken];
+     }
+     @catch (NSException *exception) {}
+     @finally {}
 }
 
 - (void)application:(UIApplication *)application
