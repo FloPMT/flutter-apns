@@ -26,6 +26,9 @@ class FirebasePushConnector extends PushConnector {
   final token = ValueNotifier(null);
 
   @override
+  final rawToken = ValueNotifier(null);
+
+  @override
   void requestNotificationPermissions() {
     _firebase.requestNotificationPermissions();
   }
