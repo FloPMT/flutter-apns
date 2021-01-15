@@ -220,7 +220,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandl
 
 - (void)application:(UIApplication *)application
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [_channel invokeMethod:@"onRawToken" arguments:token];
+    [_channel invokeMethod:@"onRawToken" arguments:deviceToken];
     NSString * token = [self stringWithDeviceToken:deviceToken];
     [_channel invokeMethod:@"onToken" arguments:token];
 }
